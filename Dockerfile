@@ -9,3 +9,4 @@ RUN rm -f /etc/apache2/sites-enabled/000-default.conf
 RUN apt-get --purge autoremove && apt-get clean && apt-get autoclean
 RUN echo "/etc/init.d/apache2 restart\ntail -f /dev/null" > start.sh
 ENTRYPOINT ["bash", "start.sh"]
+
